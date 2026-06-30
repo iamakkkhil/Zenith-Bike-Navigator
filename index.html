@@ -13,8 +13,8 @@
     <header>
         <div class="nav-container">
             <div class="logo-section">
-                <!-- Directly using the styled Text Logo used in the app -->
-                <img src="assets/Zenith app logo.png" alt="Zenith Text Logo" class="logo-img-text">
+                <!-- Directly using the Zenith Yellow Logo on Header -->
+                <img src="assets/Zenith_Yellow_logo.png" alt="Zenith Logo" class="logo-img-text">
             </div>
             <nav>
                 <ul>
@@ -152,8 +152,8 @@
             <div class="editor-frame">
                 <!-- Interactive canvas -->
                 <div class="share-canvas-container">
-                    <!-- Defaults to Scenic Road -->
-                    <img src="assets/scenic_motorcycle_share_bg.jpg" alt="Background Photo" class="canvas-bg">
+                    <!-- Defaults to User Ride 1 -->
+                    <img src="assets/user_ride_1.jpg" alt="Background Photo" class="canvas-bg">
                     
                     <!-- Draggable components -->
                     <!-- 1. Stats layout (Dynamic contents replaced by script.js) -->
@@ -166,10 +166,9 @@
                         </svg>
                     </div>
                     
-                    <!-- 3. Watermark Logo (Vector PNG Overlay) -->
+                    <!-- 3. Watermark Logo (Vector PNG Overlay - using Zenith Yellow Logo) -->
                     <div class="draggable watermark-overlay" style="top: 500px; left: 200px;">
-                        <img src="assets/Zenith_logo_without_text.png" alt="Zenith Logo" class="watermark-logo">
-                        <span class="watermark-text">ZENITH</span>
+                        <img src="assets/Zenith_Yellow_logo.png" alt="Zenith Watermark" class="watermark-logo">
                     </div>
                     
                     <!-- Draggable photo outline boundary indicator -->
@@ -190,8 +189,7 @@
                     <div class="control-group">
                         <label>Select Background Photo</label>
                         <div class="bg-selector">
-                            <button class="control-btn active" data-bg="assets/scenic_motorcycle_share_bg.jpg">Scenic Sunset</button>
-                            <button class="control-btn" data-bg="assets/user_ride_1.jpg">Ride Photo 1</button>
+                            <button class="control-btn active" data-bg="assets/user_ride_1.jpg">Ride Photo 1</button>
                             <button class="control-btn" data-bg="assets/user_ride_2.jpg">Ride Photo 2</button>
                         </div>
                     </div>
