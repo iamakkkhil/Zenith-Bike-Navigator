@@ -13,9 +13,8 @@
     <header>
         <div class="nav-container">
             <div class="logo-section">
-                <!-- Using Zenith brand logo without text -->
-                <img src="assets/Zenith_logo_without_text.png" alt="Zenith Logo" class="logo-img">
-                <span class="logo-text">ZENITH</span>
+                <!-- Directly using the styled Text Logo used in the app -->
+                <img src="assets/Zenith app logo.png" alt="Zenith Text Logo" class="logo-img-text">
             </div>
             <nav>
                 <ul>
@@ -153,26 +152,12 @@
             <div class="editor-frame">
                 <!-- Interactive canvas -->
                 <div class="share-canvas-container">
+                    <!-- Defaults to Scenic Road -->
                     <img src="assets/scenic_motorcycle_share_bg.jpg" alt="Background Photo" class="canvas-bg">
                     
                     <!-- Draggable components -->
-                    <!-- 1. Stats layout (Vector CSS Overlay) -->
-                    <div class="draggable stats-overlay selected" style="top: 30px; left: 15px;">
-                        <div class="stats-grid">
-                            <div class="stat-col">
-                                <span class="stat-lbl">Distance</span>
-                                <span class="stat-val">154.2 km</span>
-                            </div>
-                            <div class="stat-col">
-                                <span class="stat-lbl">Time</span>
-                                <span class="stat-val">03:45:12</span>
-                            </div>
-                            <div class="stat-col">
-                                <span class="stat-lbl">Avg Speed</span>
-                                <span class="stat-val">41.2 km/h</span>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- 1. Stats layout (Dynamic contents replaced by script.js) -->
+                    <div class="draggable stats-overlay selected" style="top: 30px; left: 15px;"></div>
                     
                     <!-- 2. Route Path (Vector SVG Overlay) -->
                     <div class="draggable route-overlay" style="top: 220px; left: 60px;">
@@ -182,13 +167,34 @@
                     </div>
                     
                     <!-- 3. Watermark Logo (Vector PNG Overlay) -->
-                    <div class="draggable watermark-overlay" style="bottom: 30px; left: 100px;">
+                    <div class="draggable watermark-overlay" style="top: 500px; left: 200px;">
                         <img src="assets/Zenith_logo_without_text.png" alt="Zenith Logo" class="watermark-logo">
                         <span class="watermark-text">ZENITH</span>
                     </div>
                     
                     <!-- Draggable photo outline boundary indicator -->
                     <div class="canvas-interactive-overlay"></div>
+                </div>
+
+                <!-- Template & Background Customizer Controls -->
+                <div class="editor-controls">
+                    <div class="control-group">
+                        <label>Select Template</label>
+                        <div class="template-selector">
+                            <button class="control-btn active" data-template="Minimal">Minimal</button>
+                            <button class="control-btn" data-template="Grid">Grid</button>
+                            <button class="control-btn" data-template="Footer">Footer</button>
+                            <button class="control-btn" data-template="Classic">Classic</button>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label>Select Background Photo</label>
+                        <div class="bg-selector">
+                            <button class="control-btn active" data-bg="assets/scenic_motorcycle_share_bg.jpg">Scenic Sunset</button>
+                            <button class="control-btn" data-bg="assets/user_ride_1.jpg">Ride Photo 1</button>
+                            <button class="control-btn" data-bg="assets/user_ride_2.jpg">Ride Photo 2</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
