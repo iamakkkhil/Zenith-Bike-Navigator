@@ -401,10 +401,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 4000);
     }
 
+    // Increment page visits counter
+    fetch('https://countapi.mileshilliard.com/api/v1/hit/zenith_bike_navigator_page_visits')
+        .catch(err => console.error("Error updating page visits:", err));
+
     const downloadLinks = document.querySelectorAll('a[download]');
     downloadLinks.forEach(link => {
         link.addEventListener('click', () => {
             showToast("Starting download... Check your notification bar.");
+            fetch('https://countapi.mileshilliard.com/api/v1/hit/zenith_bike_navigator_apk_downloads')
+                .catch(err => console.error("Error updating download count:", err));
         });
     });
 
