@@ -1,95 +1,95 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Phone Screenshots Slider & Interactive Progress Tabs Link
-    const phoneSlides = document.querySelectorAll('.slide');
+    // 1. Auto-Playing Progress Tabs Slider (Hero Features Showcase)
     const tabs = document.querySelectorAll('.slider-tab');
     const tabSlides = document.querySelectorAll('.slider-card-slide');
-    let currentSlide = 0;
-    const slideInterval = 3000;
-    let autoRotateTimer = null;
-    let isUserInteracting = false;
+    const phoneSlides = document.querySelectorAll('.slide');
+    
+    let activeIndex = 0;
+    const tabDuration = 5000; // 5 seconds per tab
+    let progressInterval = null;
+    let progressTimeElapsed = 0;
+    const updateTick = 50; // Update progress bar every 50ms
+    let isUserHoveringTab = false;
 
-    // Mapping slide index to tab index
-    const slideToTabMap = {
-        1: 0, // Navigation -> Tab 0
-        7: 1, // Media -> Tab 1
-        6: 2, // Alerts -> Tab 2
-        5: 3  // Logger -> Tab 3
-    };
+    function selectTab(index) {
+        if (tabs.length === 0) return;
+        
+        activeIndex = index;
+        progressTimeElapsed = 0;
 
-    function goToSlide(index) {
-        if (phoneSlides.length === 0) return;
-        phoneSlides[currentSlide].classList.remove('active');
-        currentSlide = index;
-        phoneSlides[currentSlide].classList.add('active');
-
-        // Sync tab if this slide index matches one of the tabs
-        const tabIndex = slideToTabMap[index];
-        if (tabIndex !== undefined) {
-            activateTab(tabIndex);
-        }
-    }
-
-    function nextSlide() {
-        if (isUserInteracting) return;
-        const nextIndex = (currentSlide + 1) % phoneSlides.length;
-        goToSlide(nextIndex);
-    }
-
-    function activateTab(tabIndex) {
+        // Reset and update tabs active states
         tabs.forEach((tab, idx) => {
             tab.classList.remove('active');
             const fill = tab.querySelector('.tab-progress-fill');
-            if (fill) fill.style.width = idx === tabIndex ? '100%' : '0%';
+            if (fill) fill.style.width = '0%';
             
-            if (idx === tabIndex) {
+            if (idx === index) {
                 tab.classList.add('active');
             }
         });
 
+        // Update description slides active states
         tabSlides.forEach((slide, idx) => {
             slide.classList.remove('active');
-            if (idx === tabIndex) {
+            if (idx === index) {
                 slide.classList.add('active');
             }
         });
+
+        // Sync the S24 Ultra phone screenshot
+        const targetPhoneSlideIndex = parseInt(tabs[index].dataset.slide);
+        if (phoneSlides.length > 0) {
+            phoneSlides.forEach((pSlide, pIdx) => {
+                pSlide.classList.remove('active');
+                if (pIdx === targetPhoneSlideIndex) {
+                    pSlide.classList.add('active');
+                }
+            });
+        }
     }
 
-    if (phoneSlides.length > 0) {
-        // Initialize state
-        goToSlide(0);
-        autoRotateTimer = setInterval(nextSlide, slideInterval);
+    function startProgressTimer() {
+        if (progressInterval) clearInterval(progressInterval);
+        
+        progressInterval = setInterval(() => {
+            if (isUserHoveringTab) return; // Pause timer on hover
+
+            progressTimeElapsed += updateTick;
+            const percentage = (progressTimeElapsed / tabDuration) * 100;
+            
+            const activeTabFill = tabs[activeIndex].querySelector('.tab-progress-fill');
+            if (activeTabFill) {
+                activeTabFill.style.width = `${percentage}%`;
+            }
+
+            if (progressTimeElapsed >= tabDuration) {
+                const nextIndex = (activeIndex + 1) % tabs.length;
+                selectTab(nextIndex);
+            }
+        }, updateTick);
     }
 
-    // Add click listeners to tabs to jump to their specific slide
-    tabs.forEach((tab, idx) => {
-        tab.addEventListener('click', () => {
-            isUserInteracting = true;
-            const targetSlide = parseInt(tab.dataset.slide);
-            goToSlide(targetSlide);
-            activateTab(idx);
+    if (tabs.length > 0) {
+        selectTab(0);
+        startProgressTimer();
 
-            // Resume auto-rotation after 6s of inactivity
-            clearTimeout(window.resumeTimer);
-            window.resumeTimer = setTimeout(() => {
-                isUserInteracting = false;
-            }, 6000);
-        });
+        // Listen for tab clicks
+        tabs.forEach((tab, idx) => {
+            tab.addEventListener('click', () => {
+                selectTab(idx);
+            });
 
-        // Hover to preview tab
-        tab.addEventListener('mouseenter', () => {
-            isUserInteracting = true;
-            const targetSlide = parseInt(tab.dataset.slide);
-            goToSlide(targetSlide);
-            activateTab(idx);
-        });
+            // Pause auto-rotation on hover, resume on leave
+            tab.addEventListener('mouseenter', () => {
+                isUserHoveringTab = true;
+                selectTab(idx);
+            });
 
-        tab.addEventListener('mouseleave', () => {
-            clearTimeout(window.resumeTimer);
-            window.resumeTimer = setTimeout(() => {
-                isUserInteracting = false;
-            }, 3000);
+            tab.addEventListener('mouseleave', () => {
+                isUserHoveringTab = false;
+            });
         });
-    });
+    }
 
     // 2. Interactive Share Card Drag & Drop Simulator
     const draggables = document.querySelectorAll('.draggable');
