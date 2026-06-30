@@ -153,17 +153,39 @@
             <div class="editor-frame">
                 <!-- Interactive canvas -->
                 <div class="share-canvas-container">
-                    <img src="assets/zenith_share_card.jpg" alt="Background Photo" class="canvas-bg">
+                    <img src="assets/scenic_motorcycle_share_bg.jpg" alt="Background Photo" class="canvas-bg">
                     
                     <!-- Draggable components -->
-                    <!-- 1. Stats layout -->
-                    <img src="assets/Screenshot_20260630_100918_Zenith.jpg" alt="Stats Layout" class="draggable stats-card-img selected" style="top: 40px; left: 15px; border-radius: 12px; height: 130px; object-fit: cover; object-position: bottom;">
+                    <!-- 1. Stats layout (Vector CSS Overlay) -->
+                    <div class="draggable stats-overlay selected" style="top: 30px; left: 15px;">
+                        <div class="stats-grid">
+                            <div class="stat-col">
+                                <span class="stat-lbl">Distance</span>
+                                <span class="stat-val">154.2 km</span>
+                            </div>
+                            <div class="stat-col">
+                                <span class="stat-lbl">Time</span>
+                                <span class="stat-val">03:45:12</span>
+                            </div>
+                            <div class="stat-col">
+                                <span class="stat-lbl">Avg Speed</span>
+                                <span class="stat-val">41.2 km/h</span>
+                            </div>
+                        </div>
+                    </div>
                     
-                    <!-- 2. Route Path -->
-                    <img src="assets/Screenshot_20260630_101005_Zenith.jpg" alt="Route Path" class="draggable route-poly-img" style="top: 220px; left: 90px; border-radius: 14px; height: 140px; object-fit: cover;">
+                    <!-- 2. Route Path (Vector SVG Overlay) -->
+                    <div class="draggable route-overlay" style="top: 220px; left: 60px;">
+                        <svg width="200" height="150" viewBox="0 0 200 150" fill="none">
+                            <path d="M 20 130 C 50 110, 30 70, 70 60 C 110 50, 90 110, 130 90 C 170 70, 150 30, 180 20" stroke="#E9B949" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
                     
-                    <!-- 3. Watermark Logo -->
-                    <img src="assets/Zenith_logo_without_text.png" alt="Zenith Watermark" class="draggable watermark-img" style="bottom: 30px; left: 120px;">
+                    <!-- 3. Watermark Logo (Vector PNG Overlay) -->
+                    <div class="draggable watermark-overlay" style="bottom: 30px; left: 100px;">
+                        <img src="assets/Zenith_logo_without_text.png" alt="Zenith Logo" class="watermark-logo">
+                        <span class="watermark-text">ZENITH</span>
+                    </div>
                     
                     <!-- Draggable photo outline boundary indicator -->
                     <div class="canvas-interactive-overlay"></div>

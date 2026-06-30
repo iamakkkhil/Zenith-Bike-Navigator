@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
         activeElement.style.top = `${newTop}px`;
         
         // Remove bottom constraint default styling on watermark so absolute top works
-        if(activeElement.classList.contains('watermark-img')) {
+        if(activeElement.classList.contains('watermark-overlay')) {
             activeElement.style.bottom = 'auto';
         }
 
