@@ -70,7 +70,47 @@
         <div class="hero-container">
             <div class="hero-info">
                 <h1>Zenith: The Ultimate Himalayan Copilot & Tripper Navigation</h1>
-                <p>Zenith is a premium, high-performance console application designed specifically for the Himalayan Bike (Himalayan 450). Directly mirror your route to the bike's Tripper dashboard, control media via the handlebar joystick, receive real-time call/SMS/WhatsApp notifications on your dash, and log your adventure stats offline.</p>
+                <div class="hero-feature-slider">
+                    <!-- Progress Tabs Headers -->
+                    <div class="feature-slider-tabs">
+                        <button class="slider-tab active" data-slide="1" data-index="0">
+                            <span>Navigation</span>
+                            <div class="tab-progress"><div class="tab-progress-fill"></div></div>
+                        </button>
+                        <button class="slider-tab" data-slide="7" data-index="1">
+                            <span>Media</span>
+                            <div class="tab-progress"><div class="tab-progress-fill"></div></div>
+                        </button>
+                        <button class="slider-tab" data-slide="6" data-index="2">
+                            <span>Alerts</span>
+                            <div class="tab-progress"><div class="tab-progress-fill"></div></div>
+                        </button>
+                        <button class="slider-tab" data-slide="5" data-index="3">
+                            <span>Logger</span>
+                            <div class="tab-progress"><div class="tab-progress-fill"></div></div>
+                        </button>
+                    </div>
+
+                    <!-- Description Card -->
+                    <div class="feature-slider-card">
+                        <div class="slider-card-slide active" data-index="0">
+                            <h5>Off-Screen Navigation</h5>
+                            <p>Directly mirror your route onto your bike's Tripper dashboard while your phone screen stays completely turned off to prevent overheating.</p>
+                        </div>
+                        <div class="slider-card-slide" data-index="1">
+                            <h5>Handlebar Media Controls</h5>
+                            <p>Control music playback (play, pause, skip tracks) directly using your motorcycle's physical handlebar joystick.</p>
+                        </div>
+                        <div class="slider-card-slide" data-index="2">
+                            <h5>Dash Notification Mirroring</h5>
+                            <p>Mirror incoming calls, SMS, and WhatsApp alerts on your Tripper display in real-time.</p>
+                        </div>
+                        <div class="slider-card-slide" data-index="3">
+                            <h5>Adventure Logger & Document Safe</h5>
+                            <p>Log trip statistics, routes, and store digital copies of registration and insurance documents offline.</p>
+                        </div>
+                    </div>
+                </div>
                 <div class="cta-group">
                     <a href="#download" class="btn-primary">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
@@ -248,14 +288,98 @@
             </a>
             
             <div class="sideload-steps">
-                <h3>Sideloading Instructions for Android:</h3>
-                <ol>
-                    <li>Tap the <strong>Download Zenith v1.4 APK</strong> button above to download the release package.</li>
-                    <li>If prompted by your browser, confirm the download and tap <strong>OK / Download anyway</strong>.</li>
-                    <li>Once downloaded, open your file manager or browser downloads and tap the <strong>zenith-latest.apk</strong> file.</li>
-                    <li>If this is your first time sideloading, your device will request permission. Tap <strong>Settings</strong> and enable <strong>Allow from this source</strong> for your browser/file manager.</li>
-                    <li>Return to the installer, tap <strong>Install</strong>, and launch the Zenith app!</li>
-                </ol>
+                <h3>Sideloading & Installation Guide:</h3>
+                
+                <div class="step-walkthrough-card">
+                    <!-- Progress Bar -->
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" style="width: 16.66%;"></div>
+                    </div>
+                    
+                    <div class="step-card-content">
+                        <!-- Step 1 -->
+                        <div class="step-slide active" data-step="1">
+                            <span class="step-badge">Step 1 of 6</span>
+                            <div class="step-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                            </div>
+                            <h4>Download Zenith APK</h4>
+                            <p>Tap the <strong>Download Zenith v1.4 APK</strong> button above to download the release package (`zenith-latest.apk`) to your Android device.</p>
+                        </div>
+                        
+                        <!-- Step 2 -->
+                        <div class="step-slide" data-step="2">
+                            <span class="step-badge">Step 2 of 6</span>
+                            <div class="step-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                            </div>
+                            <h4>Confirm Browser Alert</h4>
+                            <p>If prompted by your browser with a security warning, tap <strong>OK</strong> or <strong>Download anyway</strong> to proceed.</p>
+                        </div>
+                        
+                        <!-- Step 3 -->
+                        <div class="step-slide" data-step="3">
+                            <span class="step-badge">Step 3 of 6</span>
+                            <div class="step-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                            </div>
+                            <h4>Open File Manager</h4>
+                            <p>Once the download is complete, open your device's <strong>File Manager</strong> or <strong>Downloads</strong> folder and tap the `zenith-latest.apk` file.</p>
+                        </div>
+                        
+                        <!-- Step 4 -->
+                        <div class="step-slide" data-step="4">
+                            <span class="step-badge">Step 4 of 6</span>
+                            <div class="step-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                            </div>
+                            <h4>Enable Sideload Permissions</h4>
+                            <p>If this is your first time sideloading, your device will prompt you. Tap <strong>Settings</strong> and switch on <strong>Allow from this source</strong> for your browser or file manager.</p>
+                        </div>
+                        
+                        <!-- Step 5 -->
+                        <div class="step-slide" data-step="5">
+                            <span class="step-badge">Step 5 of 6</span>
+                            <div class="step-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                            </div>
+                            <h4>Google Play Protect Warns?</h4>
+                            <p>If Google Play Protect warns you or blocks installation (common for community builds with self-signed keys), you may need to temporarily pause it. <a href="https://support.google.com/googleplay/answer/2812853" target="_blank" style="color: var(--gold-accent); text-decoration: underline; font-weight: 600;">Click here to learn how to pause Play Protect</a>.</p>
+                        </div>
+                        
+                        <!-- Step 6 -->
+                        <div class="step-slide" data-step="6">
+                            <span class="step-badge">Step 6 of 6</span>
+                            <div class="step-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </div>
+                            <h4>Install & Launch Zenith</h4>
+                            <p>Return to the installation prompt, tap <strong>Install</strong>, and launch the Zenith app! You are ready to sync with your Himalayan Tripper display.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Navigation Controls -->
+                    <div class="step-controls">
+                        <button class="step-btn btn-prev" disabled>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                            Back
+                        </button>
+                        
+                        <div class="step-dots">
+                            <span class="dot active" data-go="1"></span>
+                            <span class="dot" data-go="2"></span>
+                            <span class="dot" data-go="3"></span>
+                            <span class="dot" data-go="4"></span>
+                            <span class="dot" data-go="5"></span>
+                            <span class="dot" data-go="6"></span>
+                        </div>
+                        
+                        <button class="step-btn btn-next">
+                            Next
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -268,16 +392,17 @@
                 Zenith is built on top of excellent open-source contributions from the motorcycle dashboard integration and logging community. Special thanks to the repositories of:
             </p>
             <div style="display: flex; justify-content: center; gap: 24px; flex-wrap: wrap;">
-                <a href="https://github.com/iamakkkhil/Zenith" target="_blank" style="color: var(--text-primary); text-decoration: none; font-size: 14px; font-weight: 600; transition: color 0.3s;" onmouseover="this.style.color='#E9B949'" onmouseout="this.style.color='#fff'">Northstar</a>
+                <a href="https://github.com/adityadasika21/NorthStar" target="_blank" style="color: var(--text-primary); text-decoration: none; font-size: 14px; font-weight: 600; transition: color 0.3s;" onmouseover="this.style.color='#E9B949'" onmouseout="this.style.color='#fff'">Northstar</a>
                 <a href="https://github.com/norbertFeron/better-dash" target="_blank" style="color: var(--text-primary); text-decoration: none; font-size: 14px; font-weight: 600; transition: color 0.3s;" onmouseover="this.style.color='#E9B949'" onmouseout="this.style.color='#fff'">better-dash</a>
-                <a href="https://github.com/OpenDash" target="_blank" style="color: var(--text-primary); text-decoration: none; font-size: 14px; font-weight: 600; transition: color 0.3s;" onmouseover="this.style.color='#E9B949'" onmouseout="this.style.color='#fff'">OpenDash</a>
+                <a href="https://github.com/subtlesayak/open-dash" target="_blank" style="color: var(--text-primary); text-decoration: none; font-size: 14px; font-weight: 600; transition: color 0.3s;" onmouseover="this.style.color='#E9B949'" onmouseout="this.style.color='#fff'">open-dash</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Zenith. Built for the open road. All rights reserved.</p>
+    <footer style="padding: 40px 24px; background: #080809; text-align: center; border-top: 1px solid var(--border-color);">
+        <p style="margin-bottom: 12px; color: rgba(255,255,255,0.4); font-size: 14px;">&copy; 2026 Zenith. Built for the open road. All rights reserved.</p>
+        <p><a href="disclaimer.html" style="color: var(--gold-accent); text-decoration: none; font-size: 13.5px; font-weight: 600; transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#E9B949'">Terms of Use & Liability Disclaimer</a></p>
     </footer>
 
     <script src="script.js"></script>
