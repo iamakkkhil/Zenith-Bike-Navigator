@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://iamakkkhil.github.io/Zenith-Bike-Navigator/sitemap.xml
