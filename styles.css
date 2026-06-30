@@ -483,17 +483,20 @@ nav ul li a:hover {
 
 .interactive-info ul li {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 12px;
     margin-bottom: 12px;
     font-size: 15px;
     color: var(--text-secondary);
+    line-height: 1.5;
 }
 
 .interactive-info ul li svg {
     color: var(--gold-accent);
     width: 18px;
     height: 18px;
+    flex-shrink: 0;
+    margin-top: 2px;
 }
 
 /* Interactive Share Canvas styling */
@@ -1027,5 +1030,84 @@ footer p {
     .control-btn {
         font-size: 11px;
         padding: 6px 10px;
+    }
+
+    /* Sideloading Guide & Download Box Mobile Alignment Fixes */
+    .download-section {
+        padding: 60px 12px;
+    }
+
+    .download-box {
+        padding: 40px 16px;
+        border-radius: 20px;
+    }
+
+    .download-box h2 {
+        font-size: 28px;
+    }
+
+    .download-box p {
+        font-size: 14px;
+        margin-bottom: 24px;
+    }
+
+    .sideload-steps {
+        margin-top: 30px;
+        padding-top: 24px;
+    }
+
+    .step-walkthrough-card {
+        margin-top: 16px;
+    }
+
+    .step-card-content {
+        padding: 24px 12px;
+        min-height: 240px;
+    }
+
+    .step-badge {
+        margin-bottom: 16px;
+    }
+
+    .step-icon {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 16px;
+    }
+
+    .step-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .step-slide h4 {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .step-slide p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .step-controls {
+        padding: 12px 16px;
+        gap: 8px;
+    }
+
+    .step-btn {
+        padding: 6px 12px;
+        font-size: 12px;
+        gap: 4px;
+    }
+
+    .step-btn svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    /* Hide redundant pagination dots on mobile to prevent horizontal overflow */
+    .step-dots {
+        display: none;
     }
 }
